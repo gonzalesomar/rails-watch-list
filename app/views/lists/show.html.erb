@@ -1,14 +1,14 @@
 <div class="container mt-5">
   <h2><strong><%= @list.name %></strong></h2>
-  
+
   <ol><strong>Movies</strong></ol>
     <% @list.movies.each do |movie| %>
-      <li> 
+      <li>
         <%= movie.title%>
       </li>
     <% end %>
 
     <hr>
-    
+  <p><%= link_to "Add a bookmark", new_list_bookmark_path(@list), class: "btn btn-primary" %></p>
   <p><%= link_to "Back to lists", lists_path, class: "btn btn-info" %></p>
 </div>

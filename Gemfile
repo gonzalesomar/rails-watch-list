@@ -62,6 +62,7 @@ group :development do
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
 
+# gem 'sassc', '~> 2.1.0'
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
 gem "bootstrap", "~> 5.2"
