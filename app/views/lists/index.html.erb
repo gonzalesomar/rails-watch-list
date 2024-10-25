@@ -1,11 +1,16 @@
 <div class="container">
 
 <h1>Lists</h1>
+<%= cl_image_tag("cvnr2txiyzz9ftcy19gu",
+      width: 200, height: 150, crop: :fill) %>
 <p>The best movie list</p>
 <ul>
   <% @lists.each do |list| %>
     <div class="container" style="flex">
       <li>
+        <% unless list.photo.key.nil? %>
+          <%= cl_image_tag(list.photo.key, height: 300, width: 400, crop: :fill) %>
+        <% end %>
         <%= link_to list.name, list_path(list) %>
       </li>
     </div>

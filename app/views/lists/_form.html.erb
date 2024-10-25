@@ -1,10 +1,11 @@
 <div class="container">
   <%= simple_form_for (list) do |f| %>
     <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit %>
   <% end %>
 
   <hr>
-  
+
   <p><%= link_to "Back to lists", lists_path, class: "btn btn-info" %></p>
 </div>
